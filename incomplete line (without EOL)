@@ -1,0 +1,15 @@
++ cd /work1/u1272905/A1_panel_wkdir/NA12878_HG001_plus
++ /project/GP1/u3710062/AI_SHARE/software/Sentieon/sentieon-genomics-201808/bin/sentieon util sort -r /project/GP1/u3710062/AI_SHARE/reference/GATK_bundle/2.8/hg19/ucsc.hg19.fasta -o NA12878_HG001_plus.sorted.bam -t 40 --sam2bam -i -
++ /project/GP1/u3710062/AI_SHARE/software/Sentieon/sentieon-genomics-201808/bin/bwa mem -M -R '@RG\tID:GP_NA12878_HG001_plus\tSM:SM_NA12878_HG001_plus\tPL:ILLUMINA' -t 40 -K 10000000 /project/GP1/u3710062/AI_SHARE/reference/GATK_bundle/2.8/hg19/ucsc.hg19.fasta /work2/u00srx00/DRAGEN/Pipeline_compare/INPUT/temp/NA12878_HG001_plus/NA12878_HG001_plus.R1.fastq /work2/u00srx00/DRAGEN/Pipeline_compare/INPUT/temp/NA12878_HG001_plus/NA12878_HG001_plus.R2.fastq
+This software is licensed to chienyuchen@ntu.edu.tw by Sentieon Inc.
+cmdline: /project/GP1/u3710062/AI_SHARE/software/Sentieon/sentieon-genomics-201808/libexec/util sort -r /project/GP1/u3710062/AI_SHARE/reference/GATK_bundle/2.8/hg19/ucsc.hg19.fasta -o NA12878_HG001_plus.sorted.bam -t 40 --sam2bam -i -
+This software is licensed to chienyuchen@ntu.edu.tw by Sentieon Inc.
+version: sentieon-genomics-201808
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::main_mem] bwa index loaded in 1010.042 CPU sec, 38.382 real sec
+[M::process] read 67568 sequences (10000064 bp) in 0.086 CPU sec, 1.205 real sec...
+[E::bns_fetch_seq] begin=3294251218, mid=3294251219, end=3137161264, len=157089954, seq=0x2abd1942e010, rid=92, far_beg=3137122762, far_end=3137161264
+bwa: bntseq.c:444: bns_fetch_seq: Assertion `seq && *end - *beg == len' failed.
+/var/spool/pbs/mom_priv/jobs/98415.srvc1.SC: line 92: 28482 Aborted                 $release_dir/bin/bwa mem -M -R "@RG\tID:$group\tSM:$sample\tPL:$platform" -t $nt -K 10000000 $fasta $fastq_1 $fastq_2
++ echo -n error
+SAM parsing error: Incomplete line (without EOL), at line starting as "error"
